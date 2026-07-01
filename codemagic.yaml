@@ -1,0 +1,23 @@
+workflows:
+  ios-workflow:
+    name: phyphox iOS Build
+    max_build_duration: 60
+    environment:
+      xcode: latest
+      vars:
+        XCODE_PROJECT: "phyphox-iOS/phyphox.xcodeproj"
+        XCODE_SCHEME: "phyphox"
+    scripts:
+      - name: Fetch submodules
+        script: |
+          git submodule update --init --recursive
+      - name: Build for testing (unsigned, just to verify it compiles)
+        script: |
+          xcodebuild build \
+            -project "$XCODE_PROJECT" \
+            -scheme "$XCODE_SCHEME" \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            CODE_SIGNING_ALLOWED=NO
+    artifacts:
+      - build/**/*.app
