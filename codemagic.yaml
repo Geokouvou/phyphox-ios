@@ -3,7 +3,7 @@ workflows:
     name: phyphox iOS Build
     max_build_duration: 60
     environment:
-      xcode: latest
+      xcode: 14.3.1
       vars:
         XCODE_PROJECT: "phyphox-iOS/phyphox.xcodeproj"
         XCODE_SCHEME: "phyphox"
