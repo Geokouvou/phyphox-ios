@@ -10,3 +10,8 @@
 [submodule "phyphox-iOS/JXLS"]
 	path = phyphox-iOS/JXLS
 	url = https://github.com/JanX2/JXLS.git
+
+
+[submodule "phyphox-iOS/CocoaMQTT"]
+	path = phyphox-iOS/CocoaMQTT
+	url = https://github.com/emqx/CocoaMQTT.git
