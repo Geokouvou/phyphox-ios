@@ -2,7 +2,7 @@ workflows:
   ios-workflow:
     name: phyphox iOS Build
     max_build_duration: 60
-        environment:
+    environment:
       xcode: 16.4
       vars:
         XCODE_PROJECT: "phyphox-iOS/phyphox.xcodeproj"
